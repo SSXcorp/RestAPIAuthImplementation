@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Role implements GrantedAuthority {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="role_id")
     private Integer roleId;
 
@@ -35,7 +35,6 @@ public class Role implements GrantedAuthority {
 
     @Override
     public String getAuthority() {
-        // TODO Auto-generated method stub
         return this.authority;
     }
 
